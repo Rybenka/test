@@ -7,7 +7,7 @@ script:
   - docker images ewalub/node
 
 before_deploy:
-  - docker login -u "ewalub" -p "d0C%e^p@$$"
+  - docker login -u ewalub -p d0C%e^p@$$
 
 deploy:
   provider: script
