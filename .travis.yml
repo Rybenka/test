@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t ewalub/node .
   - docker images ewalub/node
+
+before_deploy:
+  - docker login -u ewalub -p d0C%e^p@$$
+
+deploy:
+  provider: script
+  script: docker push ewalub/node
+  on:
+    branch: master
